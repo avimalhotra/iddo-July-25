@@ -27,6 +27,7 @@ img{ vertical-align: bottom;}
 
 html{
     font-size: 15px;
+    scroll-behavior: smooth;
     --ff: proxima, sans-serif;
     --red:#ca3c3c;
 }
@@ -55,22 +56,47 @@ body{ font:16px var(--ff);}
 .flex{ display: flex;}
 .justify-space-between{ justify-content: space-between; }
 .align-center{ align-items: center;}
+.gy-4{ gap: 4rem 0;}
 
 
 /* layout */
-header{ background: #000; color: #fff; }
+header{ background: #000; color: #fff; position: sticky; top: 0; }
 h1{ font-size: 2rem;}
 h1 a{ color: inherit; line-height: 80px;}
-nav{}
-nav ul{}
-nav li{ margin: 0 20px;}
-nav a{ color: inherit; line-height: 80px;}
+nav{ margin-left: -20px;}
+nav li{ margin: 0 5px;}
+nav a{ color: inherit; line-height: 80px; padding: 0 15px;}
 .btn{ flex-shrink: 0; width: 90px; height: 35px; border: 2px solid; background: none; color: var(--red); border-radius: 10px; font: 16px var(--ff);}
+
+
+
+.banner{ background: #666; color: #fff; padding: 15rem 0;}
+.banner p{ font-size: 4rem; font-weight: 100;}
+.banner a{ color: var(--red); }
+.banner button{ background: none; border: none; color: inherit; font-size: 10rem; margin-right: 40px; }
+
+
+
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
+.circle{ width: 100px; aspect-ratio: 1/1; border: 2px solid; display: grid; place-items: center; border-radius: 50%; font-size: 36px; margin-right: 2rem; }
+.wrap-3 h3{ font-size: 16px; line-height: 30px;}
+.wrap-3 p{ font: 100 14px/22px var(--ff) }
+
+
+
+
+
+
+
+
+
 
 
 /* responsive */
 @media screen and (max-width:1220px){
     html{font-size: 13px;}
+    h2{ font-size: 60px; }
 }
 
 @media screen and (max-width:980px){
@@ -86,10 +112,12 @@ nav a{ color: inherit; line-height: 80px;}
     .col-t-10{ grid-column: span 10;}
     .col-t-11{ grid-column: span 11;}
     .col-t-12{ grid-column: span 12;}
+    .banner p{ font-size: 3rem;}
 }
 
 @media screen and (max-width:767px){
     html{font-size: 12px;}
+    .collapse{ display: none;}
 }
 
 @media screen and (max-width:460px){
@@ -105,4 +133,5 @@ nav a{ color: inherit; line-height: 80px;}
     .col-p-10{ grid-column: span 10;}
     .col-p-11{ grid-column: span 11;}
     .col-p-12{ grid-column: span 12;}
+    .banner .flex{ flex-direction: column; }
 }
