@@ -28,6 +28,7 @@ img{ vertical-align: bottom;}
 html{
     font-size: 15px;
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
     --ff: proxima, sans-serif;
     --red:#ca3c3c;
 }
@@ -60,7 +61,7 @@ body{ font:16px var(--ff);}
 
 
 /* layout */
-header{ background: #000; color: #fff; position: sticky; top: 0; }
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 1; }
 h1{ font-size: 2rem;}
 h1 a{ color: inherit; line-height: 80px;}
 nav{ margin-left: -20px;}
@@ -84,12 +85,18 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .wrap-3 p{ font: 100 14px/22px var(--ff) }
 
 
+.wrap-4{ background: #fff; color: var(--red); text-align: center; font-size: 36px; line-height: 10rem; }
 
 
-
-
-
-
+.wrap-5{ background: #ebebeb; color: #363636; padding: 100px 0 140px;}
+.wrap-5 .btn{ margin: 2rem 10px 4rem 0; }
+.wrap-5 .btn.active{ background: var(--red); color: #fff; border-color: var(--red);}
+.work{ position: relative; overflow: hidden;}
+.over{ position: absolute; background: #fff; left: 0; right: 0; bottom: -50px; text-align: center; padding: 20px 0; opacity: 0; transition: 0.5s; }
+.over h3{ font: 700 18px var(--ff); color: var(--red); line-height: 40px; }
+.over p{ font: 100 14px var(--ff); line-height: 20px;}
+.work:hover .over{ opacity: 1; bottom: 0;}
+.seemore{ font-size: 36px; background: none; border: none;  color: var(--red); margin-top: 2rem;}
 
 
 
@@ -118,6 +125,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 @media screen and (max-width:767px){
     html{font-size: 12px;}
     .collapse{ display: none;}
+    .wrap-5 .btn{ margin-right: 6px;}
 }
 
 @media screen and (max-width:460px){
@@ -134,4 +142,5 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
     .col-p-11{ grid-column: span 11;}
     .col-p-12{ grid-column: span 12;}
     .banner .flex{ flex-direction: column; }
+    .work img{ width: 100%;}
 }
