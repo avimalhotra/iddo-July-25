@@ -100,6 +100,46 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 
 
 
+.wrap-6{ background: #666; padding: 4rem 0 2rem; color: #fff; text-align: center;}
+.review{ display: none;}
+.review.active{ display: block;}
+.review p{font: 100 36px/41px var(--ff); margin-bottom: 1rem;}
+.review figcaption{ font: 700 14px var(--ff); margin-top: 10px;}
+.pager{margin: 22px 0 0 0;}
+.pager ul{ justify-content: center;}
+.pager li{ margin: 0 5px;}
+.pager a{ display: block; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%;}
+.pager a.active{ background: #fff;}
+
+
+
+
+.wrap-7{ background: #fff; color: #363636; padding: 100px 0 140px;}
+.team{ margin: 80px 0 40px; position: relative;}
+.member{ margin: 50px 0 0 100px;}
+.social{ position: absolute; gap:10px; top: 60px; left: 140px;}
+.social a{ display: block; border-radius: 50%; background: var(--red); color: #fff; font-size: 24px; width: 50px; line-height: 50px; text-align: center;}
+.member h3{ color: var(--red); font-size: 24px; margin-bottom: 10px;}
+.member small{ color: #898989; font: 100 14px var(--ff);}
+.member p{ color: #666; font: 100 14px/22px var(--ff); margin-top: 2rem;}
+
+
+
+.wrap-8{ background: #666; color: #fff; text-align: center; padding: 85px 0 65px;}
+.wrap-8 span{ font-size: 72px; }
+.wrap-8 p{ font: 100 72px var(--ff) }
+.wrap-8 b{ font: 700 18px var(--ff) }
+
+
+
+.wrap-9{ background: #fff; color: #363636; padding: 100px 0 125px;}
+.chart{ margin-top: 80px; aspect-ratio: 1/1; border-radius: 50%; color: var(--red); padding: 10px; position: relative; }
+.chart p{ background: #fff; position: absolute; inset: 0; border-radius: 50%; display: grid; place-items: center; margin: 10px; }
+.c75{ background: conic-gradient(var(--red) 270deg, #fff 270deg);}
+.c50{ background: conic-gradient(var(--red) 180deg, #fff 180deg);}
+.c25{ background: conic-gradient(var(--red) 90deg, #fff 90deg);}
+
+
 /* responsive */
 @media screen and (max-width:1220px){
     html{font-size: 13px;}
@@ -120,12 +160,15 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
     .col-t-11{ grid-column: span 11;}
     .col-t-12{ grid-column: span 12;}
     .banner p{ font-size: 3rem;}
+    .social{ flex-flow: column wrap; top: 0; right: 0; left: auto; }
+    .member{ margin-left: 50px;}
 }
 
 @media screen and (max-width:767px){
     html{font-size: 12px;}
     .collapse{ display: none;}
     .wrap-5 .btn{ margin-right: 6px;}
+    .member{ margin-left: 0px;}
 }
 
 @media screen and (max-width:460px){
