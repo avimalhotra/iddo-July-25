@@ -131,19 +131,40 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .wrap-8 b{ font: 700 18px var(--ff) }
 
 
-
 .wrap-9{ background: #fff; color: #363636; padding: 100px 0 125px;}
 .chart{ margin-top: 80px; aspect-ratio: 1/1; border-radius: 50%; color: var(--red); padding: 10px; position: relative; }
 .chart p{ background: #fff; position: absolute; inset: 0; border-radius: 50%; display: grid; place-items: center; margin: 10px; }
 .c75{ background: conic-gradient(var(--red) 270deg, #fff 270deg);}
 .c50{ background: conic-gradient(var(--red) 180deg, #fff 180deg);}
 .c25{ background: conic-gradient(var(--red) 90deg, #fff 90deg);}
+.accordion{margin-top: 80px; }
+.accordion li{ margin-bottom: 10px;}
+.accordion a{ display: block; color: #898989; border: 1px solid #ebebeb; font: 700 14px var(--ff); border-radius: 10px; padding: 15.5px 18px; position: relative;}
+.accordion a.active{ color: var(--red);}
+.accordion a span{ margin-right: 20px; font-size: 24px;}
+.accordion p{ display: none; color: #141111; font: 100 14px/22px var(--ff); margin: 20px;}
+.accordion li:first-child p{ display: block;}
+.accordion a::after{ content: '+'; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); }
+.accordion a.active::after{ content: '-'; }
+
+
+
+.wrap-10{ padding: 23px 0 22px; background: var(--red); }
+.wrap-10 .btn{ background: #fff;}
+.wrap-10 input{ background:none; border: none; color: #fff; font: 100 36px var(--ff); }
+.wrap-10 input::placeholder{color: #fff}
+
+
+.wrap-11{ background: #7f7f7f; padding: 23px 0 0 0; text-align: center;}
+.wrap-11 .flex{ flex-flow: wrap; justify-content: space-between; gap: 1rem; }
+.wrap-11 .flex .box{ flex: 0 1 170px; background: #a6a6a6; color: #fff; line-height: 95px; margin-bottom: 22px; }
 
 
 /* responsive */
 @media screen and (max-width:1220px){
     html{font-size: 13px;}
     h2{ font-size: 60px; }
+    .wrap-11 .flex .box{ flex-basis: 150px;}
 }
 
 @media screen and (max-width:980px){
@@ -162,6 +183,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
     .banner p{ font-size: 3rem;}
     .social{ flex-flow: column wrap; top: 0; right: 0; left: auto; }
     .member{ margin-left: 50px;}
+    .wrap-11 .flex .box{ flex-basis: 130px;}
 }
 
 @media screen and (max-width:767px){
@@ -169,6 +191,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
     .collapse{ display: none;}
     .wrap-5 .btn{ margin-right: 6px;}
     .member{ margin-left: 0px;}
+    .wrap-11 .flex .box{ flex-basis: 112px;}
 }
 
 @media screen and (max-width:460px){
@@ -186,4 +209,6 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
     .col-p-12{ grid-column: span 12;}
     .banner .flex{ flex-direction: column; }
     .work img{ width: 100%;}
+    .wrap-10 input{ width: 240px; font-size: 24px;}
+    .wrap-11 .flex .box{ flex: 1 1 155px;}
 }
