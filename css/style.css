@@ -68,6 +68,8 @@ nav{ margin-left: -20px;}
 nav li{ margin: 0 5px;}
 nav a{ color: inherit; line-height: 80px; padding: 0 15px;}
 .btn{ flex-shrink: 0; width: 90px; height: 35px; border: 2px solid; background: none; color: var(--red); border-radius: 10px; font: 16px var(--ff);}
+.menu{ display: none; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);}
+.menu span{ display: block; height: 2px; background: var(--red); margin: 5px; }
 
 
 
@@ -119,7 +121,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .member{ margin: 50px 0 0 100px;}
 .social{ position: absolute; gap:10px; top: 60px; left: 140px;}
 .social a{ display: block; border-radius: 50%; background: var(--red); color: #fff; font-size: 24px; width: 50px; line-height: 50px; text-align: center;}
-.member h3{ color: var(--red); font-size: 24px; margin-bottom: 10px;}
+.member h3{ color: var(--red); font-size: 18px; margin-bottom: 10px;}
 .member small{ color: #898989; font: 100 14px var(--ff);}
 .member p{ color: #666; font: 100 14px/22px var(--ff); margin-top: 2rem;}
 
@@ -160,6 +162,27 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .wrap-11 .flex .box{ flex: 0 1 170px; background: #a6a6a6; color: #fff; line-height: 95px; margin-bottom: 22px; }
 
 
+
+.wrap-12{ background: #ebebeb; color: #363636; padding: 100px 0 140px; }
+.wrap-12 address{ color: #898989; font-size: 1rem; line-height: 30px; margin-top: 2rem;}
+.soc2{  margin: 20px 0;}
+.soc2 li{ margin-right: 20px; }
+.soc2 a{ color: var(--red); font-size: 16.22px; }
+.wrap-12 label{ width: 100%; border: 2px solid; padding: 14px;}
+.wrap-12 input{ border: none; background: none;}
+.wrap-12 textarea{ border: none; background: none; resize: none; vertical-align: top; height: 48px;}
+.wrap-12 button{ border: none; background: #fff; width: 100%; height: 80px; border-radius: 10px; color: var(--red); font: 400 16px var(--ff);}
+.wrap-12 button span.fa{ font-size: 36px; vertical-align: middle; margin-right: 10px;}
+.wrap-12 :is(input,textarea):focus{ outline: none; }
+.wrap-12 label:focus-within{ border-color: var(--red); color: var(--red); }
+
+
+.wrap-13{ background: #252525; color: #fff; padding: 50px 0; text-align: center; }
+.wrap-13 h3{ font-size: 2rem;}
+.wrap-13 p{ color: #999; font: 100 14px/30px var(--ff); }
+.top{ border: none; background: none; color: var(--red); font-size: 36px;}
+
+
 /* responsive */
 @media screen and (max-width:1220px){
     html{font-size: 13px;}
@@ -188,10 +211,12 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 
 @media screen and (max-width:767px){
     html{font-size: 12px;}
+    .col-m-6{ grid-column: span 6;}
     .collapse{ display: none;}
     .wrap-5 .btn{ margin-right: 6px;}
     .member{ margin-left: 0px;}
     .wrap-11 .flex .box{ flex-basis: 112px;}
+    .menu{ display: inline-block; }
 }
 
 @media screen and (max-width:460px){
